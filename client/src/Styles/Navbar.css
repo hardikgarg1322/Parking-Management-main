@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s;
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+.container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Navbar section */
+/* Navbar section */
+.nav {
+    width: 100%;
+    height: 65px;  /* Set height of navbar */
+    position: fixed;
+    top: 0;        /* Ensure it stays at the top */
+    left: 0;
+    line-height: 65px;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.8);
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.nav div.logo {
+    width: 180px;
+    height: 65px;   /* Match the navbar height */
+    position: absolute;
+    top: 0;
+    left: 10px;     /* Adjust the logo to be left aligned */
+    display: flex;
+    align-items: center;  /* Center logo vertically */
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.nav div.main_list {
+    width: 600px;
+    height: 65px;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    justify-content: space-around; /* Distribute items evenly */
+    margin: 0 15px;
+}
+
+.nav div.main_list ul li {
+    width: 120px;
+    height: 65px;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    text-transform: uppercase;
+    margin-left: -30px;
+    padding-left: 10px;   /* Adjust left padding for spacing */
+
+}
+
+/* For mobile view adjustments */
+@media screen and (max-width: 768px) {
+    .nav div.logo {
+        margin-left: 15px;   /* Adjust for smaller screens */
+    }
+    
+    .nav div.main_list {
+        width: 100%;
+        margin-top: 65px;
+        height: auto;
+        display: none;  /* Hide the menu initially */
+    }
+    
+    .nav div.main_list.show_list {
+        height: 200px;
+    }
+}
+
+/* Add margin-top to body or container to prevent overlap */
+body {
+    margin-top: 65px;  /* Ensure content below doesn't overlap with navbar */
+}
+
+/* Container for content */
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
